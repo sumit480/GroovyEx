@@ -16,10 +16,12 @@ class ExampleList{
 
 		println(lst.get(2));
 
-		println(lst.isEmply());
+		println(lst.isEmpty());
 
 		newlst=lst.minus([11,12]);
-
+		println(newlst);
+		
 		println(lst.remove(2));
+		println(lst);
 }
 }
