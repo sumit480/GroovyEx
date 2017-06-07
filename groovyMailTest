@@ -1,0 +1,39 @@
+import javax.mail.*
+import javax.mail.internet.*
+
+public static void simpleMail(String from, String password, String to, String subject, String body)throws Exception{
+
+String host="smtp.gmail.com";
+Properties prop=System.getproperties();
+prop.put("mail.smtp.starttls.enable",true);
+prop.setProperty("mail.smtp.ssl.trust",host);
+prop.put("mail.smtp.auth",true);
+prop.put("mail.smtp.host",host);
+prop.put("mail.smtp.user",from);
+prop.put("mail.smtp.password",password);
+prop.put("mail.smtp.port","587");
+
+Session session= Session.getDefaultInstance(prop,null);
+MimeMessage message=new MimeMessage(session);
+message.setFrom(new InternetAddress(from));
+
+InternetAddress toAddress=new InternetAddress(to);
+
+message.addRecipient(Message.RecipientType.TO,toAddress);
+
+message.setSubject(subject);
+message.setText(body);
+
+Transport transport=session.getTransport("smtp");
+
+transport.connect(host,from,password);
+
+transport.sendMessage(message,message.getAllRecipients());
+transport.close();
+}
+
+String s1="sumitsonu480@gmail.com";
+String s2="";
+String s3="sumitgupta480@outlook.com";
+
+simpleMail(s1,s2,s3,"Title","Text");

@@ -1,3 +1,5 @@
+load D:/GroovyEx-master/ListEx.groovy
+
 class RangeEx{
 static void main(String[] args){
 def rint=1..10;
