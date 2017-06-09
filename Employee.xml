@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employer>
+	<Employee>
+		<Name>John</Name>
+		<Country>India</Country>
+		<Age>23</Age>
+	</Employee>
+	<Employee>
+		<Name>Vicky</Name>
+		<Country>India</Country>
+		<Age>20</Age>
+	</Employee>
+	<Employee>
+		<Name>Rohan</Name>
+		<Country>USA</Country>
+		<Age>27</Age>
+	</Employee>
+	<Employee>
+		<Name>Smith</Name>
+		<Country>Australia</Country>
+		<Age>19</Age>
+	</Employee>
+	<Employee>
+		<Name>Rehan</Name>
+		<Country>UAE</Country>
+		<Age>21</Age>
+	</Employee>
+</Employer>
