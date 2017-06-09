@@ -15,3 +15,5 @@ println("\n")
 closure()
 sleep(1000)
 })
+
+//this is groovy closure program.
