@@ -15,3 +15,8 @@ println("\n")
 closure()
 sleep(1000)
 })
+<<<<<<< HEAD
+=======
+
+//this is groovy closure program.
+>>>>>>> 82c713877ade5b28dca268d30008c86074135c48

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /*I'm doing some changes to this file*/
+=======
+>>>>>>> 82c713877ade5b28dca268d30008c86074135c48
 class ListEx{
 static void main(String[] args){
 //this is the list program to include all operation of list available in groovy

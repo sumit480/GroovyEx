@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 load D:/GroovyEx-master/ListEx.groovy
 
+=======
+>>>>>>> 82c713877ade5b28dca268d30008c86074135c48
 class RangeEx{
 static void main(String[] args){
 def rint=1..10;

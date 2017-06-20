@@ -15,4 +15,10 @@ println("This is the finally block");
 }
 println("MOve on");
 }
+<<<<<<< HEAD
 }
+=======
+}
+
+//hello world
+>>>>>>> 82c713877ade5b28dca268d30008c86074135c48
