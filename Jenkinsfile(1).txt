@@ -1,0 +1,65 @@
+node{
+    
+    stage('First Commit'){
+     
+    echo "Hello"
+    }
+    stage('Bat Copy'){
+    
+    bat '\\\\blrwinopfilsrv01\\OpicsCMRE_Work\\CMRE\\NP_Stuff\\Test_1.bat'
+    }
+   // bat 'xcopy \\\\blrwinopfilsrv01\\OpicsCMRE_Work\\CMRE\\NP_Stuff\\Test_1.bat \\\\blrwinopfilsrv01\\OpicsCMRE_Work\\CMRE\\NP_Stuff\\New Folder'
+    stage('Build Pause'){
+    input 'Shall we start???'}
+    stage('Deploy'){
+    echo 'build is done'}
+    stage('Env'){
+   // bat ''
+    bat 'cd /d D:\\Groovy'
+    //bat 'SET'
+    }
+    
+}
+node{
+    stage('Creating build output'){
+    echo('creating output directory')
+    bat 'if not exist "D:\\output" mkdir D:\\output'
+    writeFile file : "D:\\output\\buildop.txt",text:"This is the first program we are trying.Added"
+    echo 'build output is done'
+    }
+    
+    
+}
+
+node{
+    stage('Reading file content'){
+    load 'D:\\Groovy\\copyFiles.groovy'}
+    stage('Job name details'){
+    
+    //load 'D:\\Groovy\\jobname.groovy'
+    }
+    
+}
+node {
+    stage('triggering Downstream Job'){
+    build job: 'sample_demo_2', parameters: [string(name: '', value: '')];
+    
+    echo 'Down stream job executed sucessfully'
+    }
+    stage('Groovy'){
+    def username = 'Jenkins'
+    echo 'Hello Mr. ${username}'
+    echo "I said, Hello Mr. ${username}"
+    
+    echo "Build is :${env.BUILD_ID},Jenkins URL is : ${env.JENKINS_URL} and job name is : ${env.JOB_NAME}"
+    }
+    stage('Parameters Demo'){
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
+    echo "${params.Greeting} World!!!"
+    }
+    stage('Day of Week'){
+        bat 'perl  D:\\DevOpsTasks\\DayOfWeek.pl'
+    }
+}
