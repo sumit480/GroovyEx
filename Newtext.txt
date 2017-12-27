@@ -1,1 +1,0 @@
-This is new text file to check groovy sync with github.
