@@ -5,13 +5,13 @@
 class ListEx{
 static void main(String[] args){
 //this is the list program to include all operation of list available in groovy
-def lst=[12,33,98,55,67,54,78];
+def lst=[12,33,98,55,67,54,82];
 def newlst=[];
 def newlst2=[];
 println(lst);
 
 //add operation
-lst.add(45);
+lst.add(40);
 println(lst);
 lst.add(76);
 println(lst);
