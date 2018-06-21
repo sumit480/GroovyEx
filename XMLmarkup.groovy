@@ -5,10 +5,10 @@ def mB=new MarkupBuilder()
 mB.collection(shelf:'New Arrivals'){
 movie(title:'Enemy Behind')
 type('War,Thriller')
-format('DVD')
-year('2003')
+format('VCD')
+year('2018')
 rating('PG')
-stars('10')
+stars('9')
 description('Talk about a US-Japan war')
 }
 }
